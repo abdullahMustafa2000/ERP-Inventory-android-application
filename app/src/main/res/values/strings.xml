@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ERP-Inventory</string>
+    <string name="username">Username</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="user_name_empty">required</string>
+    <string name="no_internet">no internet connected!</string>
+    <string name="unexpected_error">unexpected error!</string>
+    <string name="logout">logout</string>
+    <string name="ryada">Ryada</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="common_statistics">Common Statistics</string>
+    <string name="open_purchase_order">Opened purchase orders</string>
+    <string name="open_sales_order">Opened sales orders</string>
+    <string name="inventory_value">Inventory value</string>
+    <string name="unused_groups">Un-used groups</string>
+    <string name="sales_statistics">Sales Statistics</string>
+    <string name="not_signed">wrong username or password</string>
+    <string name="latest_sales_orders">Latest sales orders</string>
+    <string name="order">ORDER#</string>
+    <string name="order_status">ORDER STATUS</string>
+    <string name="order_date">ORDER DATE</string>
+    <string name="staging">STAGING</string>
+    <string name="view">VIEW</string>
+    <string name="branch">branch : </string>
+    <string name="inventory_name">Inventory : </string>
+    <string name="date">date : </string>
+    <string name="order_no">Order number : </string>
+    <string name="order_type">Order type : </string>
+</resources>

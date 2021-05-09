@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.inventory.InventoryActivity"
+            android:background="@color/page_color"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@color/action_bar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/titles_color"
+                    android:text="@string/dashboard"
+                    android:layout_marginStart="@dimen/start_screen_padding"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="9pt"
+                    android:padding="@dimen/items_padding"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_more"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:padding="8dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/top_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="8pt"
+                android:textColor="@color/icons_color"
+                android:text="@string/common_statistics"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:padding="4dp"
+                android:layout_gravity="center">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/top_cards">
+
+                    <LinearLayout
+                        android:id="@+id/open_purchase_lo"
+                        android:layout_width="0dp"
+                        app:layout_constraintWidth_percent=".48"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@color/cards_bg"
+                        android:layout_margin="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:text="@string/open_purchase_order"
+                            android:textColor="@color/desc_on_items"
+                            android:textSize="@dimen/card_title" />
+
+                        <TextView
+                            android:id="@+id/open_purchase_order_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_on_items"
+                            android:textSize="@dimen/cards_data_ts"
+                            android:text="2000"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/inventory_value_lo"
+                        android:layout_width="0dp"
+                        app:layout_constraintWidth_percent=".48"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@color/cards_bg"
+                        android:layout_margin="4dp">
+
+                        <TextView
+                            android:text="@string/inventory_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/card_title"
+                            android:layout_margin="16dp"
+                            android:textColor="@color/desc_on_items"/>
+
+                        <TextView
+                            android:id="@+id/inventory_value_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_on_items"
+                            android:textSize="@dimen/cards_data_ts"
+                            android:text="2000"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bottom_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintTop_toBottomOf="@id/top_cards">
+
+                    <LinearLayout
+                        android:id="@+id/opened_sales_lo"
+                        android:layout_width="0dp"
+                        app:layout_constraintWidth_percent=".48"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@color/cards_bg"
+                        android:layout_margin="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:text="@string/open_sales_order"
+                            android:textColor="@color/desc_on_items"
+                            android:textSize="@dimen/card_title" />
+
+                        <TextView
+                            android:id="@+id/opened_sales_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_on_items"
+                            android:textSize="@dimen/cards_data_ts"
+                            android:text="2000"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/unused_groups_lo"
+                        android:layout_width="0dp"
+                        app:layout_constraintWidth_percent=".48"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@color/cards_bg"
+                        android:layout_margin="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:text="@string/unused_groups"
+                            android:textColor="@color/desc_on_items"
+                            android:textSize="@dimen/card_title" />
+
+                        <TextView
+                            android:id="@+id/unused_groups_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_on_items"
+                            android:textSize="@dimen/cards_data_ts"
+                            android:text="2000"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:id="@+id/graph_dashboard_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/bottom_cards"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="48dp"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/more_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_read_more"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="4dp"
+                        android:padding="4dp"
+                        android:layout_toEndOf="@id/dashboard_link_txt"/>
+
+                    <TextView
+                        android:id="@+id/dashboard_link_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sales_statistics"
+                        android:textColor="@color/link_"
+                        android:textSize="10pt"
+                        android:layout_alignParentStart="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/latest_sales_opener"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/graph_dashboard_link"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="48dp"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/show_more_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_show_more"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="4dp"
+                        android:padding="4dp"
+                        android:layout_toEndOf="@id/latest_sales_title"/>
+
+                    <TextView
+                        android:id="@+id/latest_sales_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/latest_sales_orders"
+                        android:textColor="@color/link_"
+                        android:textSize="10pt"
+                        android:layout_alignParentStart="true"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/latest_sales_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/latest_sales_opener"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/cards_bg"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/order_"
+                            android:layout_width="0dp"
+                            app:layout_constraintWidth_percent=".25"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:textStyle="bold"
+                            android:textColor="@color/desc_on_items"
+                            android:text="@string/order"
+                            android:gravity="center"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:id="@+id/order_status_"
+                            android:layout_width="0dp"
+                            app:layout_constraintWidth_percent=".25"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/order_"
+                            android:textStyle="bold"
+                            android:textColor="@color/desc_on_items"
+                            android:text="@string/order_status"
+                            android:gravity="center"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:id="@+id/order_date_"
+                            android:layout_width="0dp"
+                            app:layout_constraintWidth_percent=".25"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/order_status_"
+                            android:textStyle="bold"
+                            android:textColor="@color/desc_on_items"
+                            android:text="@string/order_date"
+                            android:gravity="center"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:id="@+id/staging_"
+                            android:layout_width="0dp"
+                            app:layout_constraintWidth_percent=".25"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/order_date_"
+                            android:textStyle="bold"
+                            android:textColor="@color/desc_on_items"
+                            android:text="@string/staging"
+                            android:gravity="center"
+                            android:textAlignment="center"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/latest_sales_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginTop="4dp"/>
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

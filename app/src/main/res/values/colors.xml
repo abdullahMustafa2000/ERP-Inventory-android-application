@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="top_color">#0c0c0c</color>
+    <color name="top_bar">#5e5e5e</color>
+    <color name="page_color">#121212</color>
+    <color name="action_bar">#1f1f1f</color>
+    <color name="cards_bg">#1d1d1d</color>
+    <color name="items_on_top_color">#1e1e1e</color>
+    <color name="titles_color">#e6e6e6</color>
+    <color name="icons_color">#dfdfdf</color>
+    <color name="text_on_items">#e2e2e2</color>
+    <color name="desc_on_items">#919191</color>
+    <color name="selected_color">#A89A97</color>
+    <color name="btn">#3699ff</color>
+    <color name="btn_clicked">#187de4</color>
+    <color name="link_">#03dac5</color>
+    <color name="white">#FFF</color>
+</resources>

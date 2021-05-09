@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cards_data_ts">12pt</dimen>
+    <dimen name="card_title">8pt</dimen>
+    <dimen name="titles_text_size">14pt</dimen>
+</resources>

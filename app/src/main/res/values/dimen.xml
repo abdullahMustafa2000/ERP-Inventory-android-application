@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="icons_padding">12dp</dimen>
+    <dimen name="touch_targets_size">48dp</dimen>
+    <dimen name="text_space">4dp</dimen>
+    <dimen name="items_padding">8dp</dimen>
+    <dimen name="start_screen_padding">48dp</dimen>
+    <dimen name="items_margin">36dp</dimen>
+</resources>

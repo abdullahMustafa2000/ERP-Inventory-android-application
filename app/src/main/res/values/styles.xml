@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.ERP" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/page_color</item>
+        <item name="colorPrimaryDark">@color/page_color</item>
+        <item name="colorAccent">@color/page_color</item>
+    </style>
+
+</resources>
